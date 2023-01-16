@@ -1,79 +1,151 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hogwarts School</title>
 
     <!-- WebFont -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <script src = "https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
-    
+    <script src="https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
+
     <!-- 폰트어썸 연결하기 -->
-    <link rel="stylesheet" href="css/index.css">
-
-</head>
-<body>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
     <header>
-        <nav id="nav_search"><input type="search"></nav>
-        <div id="nav_title">
-            <img src="img/common/Logo_Default.svg" alt="Hogwart-Logo">
-            <h1>hogwarts school</h1>
-            <h3>of witchcraft and wizardry</h3>
+      <nav id="nav_search"><input type="search" /></nav>
+      <div id="nav_title">
+        <img src="img/common/Logo_Default.svg" alt="Hogwart-Logo" />
+        <h1>hogwarts school</h1>
+        <h3>of witchcraft and wizardry</h3>
+      </div>
+      <nav id="nav_menu">
+        <div>
+          <p>2023-01-05</p>
+          <img src="img/header/Nav_menu_icon.svg" alt="" />
+          <a href="#">
+            <img src="img/header/Nav_Info_SortingHat.svg" alt="" />
+          </a>
         </div>
-        <nav id="nav_menu">
-            <div>
-                <p>2023-01-05</p>
-                <img src="img/header/Nav_menu_icon.svg" alt="">
-                <a href="#">
-                    <img src="img/header/Nav_Info_SortingHat.svg" alt="">
-                </a>
-            </div>
-            <div>
-
-            </div>
-        </nav>
+        <div></div>
+      </nav>
     </header>
     <main>
-        <section>
-            <div class="container">
-                <div class="my-calendar">
-                  <div class="calendar-box">
-                    <div class="ctr-box">
-                        <span class="cal-year"></span>
-                        <span class="cal-month"></span>
-                        <button type="button" title="prev" class="btn-cal prev">
-                          <i class="fa-solid fa-chevron-left"></i>
-                        </button>
-                      <button type="button" title="next" class="btn-cal next">
-                        <i class="fa-solid fa-chevron-right"></i>
-                      </button>
-                    </div>
-                    <table class="cal-table">
-                      <thead>
-                        <tr>
-                          <th>S</th>
-                          <th>M</th>
-                          <th>T</th>
-                          <th>W</th>
-                          <th>T</th>
-                          <th>F</th>
-                          <th>S</th>
-                        </tr>
-                      </thead>
-                      <tbody class="cal-body"></tbody>
-                    </table>
-                  </div>
-                </div>
-                <!-- // .my-calendar -->
+      <section class="con1">
+        <div class="calendar">
+          <div class="calendar-box">
+            <div class="ctr-box">
+              <span class="cal-year"></span>
+              <span class="cal-month"></span>
+              <button type="button" title="prev" class="btn-cal prev">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button type="button" title="next" class="btn-cal next">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+            <table class="cal-table">
+              <thead>
+                <tr>
+                  <th>S</th>
+                  <th>M</th>
+                  <th>T</th>
+                  <th>W</th>
+                  <th>T</th>
+                  <th>F</th>
+                  <th>S</th>
+                </tr>
+              </thead>
+              <tbody class="cal-body"></tbody>
+            </table>
+          </div>
+          <div>
+            <p>Calender</p>
+            <h3>오늘의 일정</h3>
+            <span>1/27 : 퀴디치 (그리핀도르 vs 후플푸프)</span>
+          </div>
+        </div>
+        <div class="song">
+            <h1>Hogwarts!</h1>
+            <p>Our heads could do with filling With some interesting stuff</p>
+            <small>For now they're bare and full of air</small>
+        </div>
+        <div class="awards">
+            <img src="img/con1/Awards_Dr-Strange.gif" alt="">
+            <div>
+                <p>Awards</p>
+                <h3>오늘의 교수</h3>
+                <span>어둠의 마법 방어술 : 닥터 스트레인지</span>
               </div>
-        </section>
+        </div>
+      </section>
+      <section class="mainCon">
+        <h1>Draco Dormiens Nunquam Titillandus</h1>
+      </section>
+      <section class="con2">
+        <article id="con2-first">
+            <video src="img/con2/Article_2.mp4 " autoplay muted></video>
+            <h1>Welcome to hogwarts!</h1>
+            <span>
+                세계 최고의 명문, 호그와트 마법학교 입학을 환영합니다! 다가오는 봄 캠퍼스에서 만나기 앞서 입학준비를 위한 전반적인 사항에 대해 참고하시기 바랍니다. 교과과정을 반영한 똑똑한 입학 준비로 학교 생활을 더욱 자신있게 보내보세요!
+            </span>
+            <div class="Read-Btn">
+                <a href="#">
+                    <span>Read More</span>
+                    <span>January. 13. 2023</span>
+                </a>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </article>
+        <article id="con2-second">
+            <p>
+                House Cup <br/>
+                Winner:
+            </p>
+            <h1>Gryffindor!</h1>
+            <img src="img/con2/Article_1.gif"></img>
+            <div class="Read-Btn">
+                <a href="#">
+                    <span>Read More</span>
+                    <span>January. 13. 2023</span>
+                </a>
+                <i class="fa-solid fa-arrow-right"></i>
+            </div>
+        </article>
+
+      </section>
+      <section class="con3">
+        <div>
+            <img src="img/con3/Gryffindor.svg" alt="">
+            <p>Points</p>
+            <p>9,453</p>
+        </div>
+        <div>
+            <img src="img/con3/Revanclaw.svg" alt="">
+            <p>Points</p>
+            <p>7,954</p>
+        </div>
+        <div>
+            <img src="img/con3/Slytherin.svg" alt="">
+            <p>Points</p>
+            <p>8,731</p>
+        </div>
+        <div>
+            <img src="img/con3/Hufflepuff.svg" alt="">
+            <p>Points</p>
+            <p>7,276</p>
+        </div>
+      </section>
     </main>
     <footer></footer>
-</body>
-<script src="js/callender.js"></script>
-</html> 
+  </body>
+  <script src="js/callender.js"></script>
+</html>
