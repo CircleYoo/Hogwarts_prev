@@ -5,8 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hogwarts School</title>
+
+    <!-- WebFont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+    <script src = "https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
+    
+    <!-- 폰트어썸 연결하기 -->
+    <link rel="stylesheet" href="css/index.css">
+
 </head>
 <body>
-    
+    <header>
+        <nav id="nav_search"><input type="search"></nav>
+        <div id="nav_title">
+            <img src="img/common/Logo_Default.svg" alt="Hogwart-Logo">
+            <h1>hogwarts school</h1>
+            <h3>of witchcraft and wizardry</h3>
+        </div>
+        <nav id="nav_menu">
+            <div>
+                <p>2023-01-05</p>
+                <img src="img/header/Nav_menu_icon.svg" alt="">
+                <a href="#">
+                    <img src="img/header/Nav_Info_SortingHat.svg" alt="">
+                </a>
+            </div>
+            <div>
+
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="my-calendar">
+                  <div class="calendar-box">
+                    <div class="ctr-box">
+                        <span class="cal-year"></span>
+                        <span class="cal-month"></span>
+                        <button type="button" title="prev" class="btn-cal prev">
+                          <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                      <button type="button" title="next" class="btn-cal next">
+                        <i class="fa-solid fa-chevron-right"></i>
+                      </button>
+                    </div>
+                    <table class="cal-table">
+                      <thead>
+                        <tr>
+                          <th>S</th>
+                          <th>M</th>
+                          <th>T</th>
+                          <th>W</th>
+                          <th>T</th>
+                          <th>F</th>
+                          <th>S</th>
+                        </tr>
+                      </thead>
+                      <tbody class="cal-body"></tbody>
+                    </table>
+                  </div>
+                </div>
+                <!-- // .my-calendar -->
+              </div>
+        </section>
+    </main>
+    <footer></footer>
 </body>
-</html>
+<script src="js/callender.js"></script>
+</html> 
