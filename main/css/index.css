@@ -12,7 +12,7 @@
     box-sizing: border-box;
     color: var(--text-color);
     font-family: 'Ibarra Real Nova', 'suit', sans-serif;
-    letter-spacing: 0.01em;
+    letter-spacing: -0.01em;
     margin: 0;
     padding: 0;
     position: relative;
@@ -25,6 +25,7 @@ body {
   a{ text-decoration: none; }
   p { font-family: 'Ibarra Real Nova'; }
   span { font-family: 'suit'; }
+  i { color: var(--text-color); }
 
 .overlay {
   background-image: url('../img/common/Background_texture.jpg');
@@ -35,6 +36,18 @@ body {
 
   mix-blend-mode: luminosity;
 }
+
+.Read-Btn { 
+  align-items: flex-end;
+  display: flex; 
+  font-weight: 500; 
+  justify-content: space-between; 
+  letter-spacing: -0.02em;
+}
+.Read-Btn a span:first-child { 
+  border-bottom: solid 1px var(--text-color);
+}
+.Read-Btn a span:last-child { display: block; color: var(--point-color);}
 
 /* header style sheet */
 header { width: 100vw; }
@@ -122,29 +135,28 @@ header { width: 100vw; }
 /* con2 style sheet : 학교 기사 */
 .con2 { 
   border-top: solid 1px var(--line-color);
-  display: grid;
-  grid-template-rows: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   padding: 1.5rem var(--mobile-gap);
   margin: 1.5rem 0;
 }
 
-.Read-Btn { 
-  align-items: flex-end;
-  display: flex; 
-  font-weight: 500; 
-  justify-content: space-between; 
-  letter-spacing: -0.02em;
-}
-.Read-Btn a span:first-child { 
-  border-bottom: solid 1px var(--text-color);
-}
-.Read-Btn a span:last-child { display: block; color: var(--point-color);}
-
+/* con2 - 환영사 */
 #con2-first { display: flex; flex-direction: column; gap: 1rem; }
-#con2-first video { width: 100%; }
+#con2-first video { height: 15.125rem; object-fit: cover; }
 #con2-first h1 { font-size: 2.5rem; font-weight: 600; letter-spacing: -0.02em;}
 #con2-first span { line-height: 150%; text-transform: capitalize; }
+#con2-first .Read-Btn { 
+  border-bottom: solid 1px var(--line-color);
+  padding: 1rem 0 2rem;
+ }
 
+/* con2 - 우승 기숙사 */
+#con2-second p {font-size: 1.25rem; font-weight: 500;}
+#con2-second p br {display: none;}
+#con2-second h1 { text-transform: uppercase; font-size: 3.25rem; font-weight: 600;}
+#con2-second img { width: 100vw; height: 13.5rem; object-fit: cover;}
+#con2-second .Read-Btn {margin-top: 2rem;}
 /* con3 style sheet : 기숙사 점수 */
 .con3 {
   border-bottom: solid 1px var(--line-color);
@@ -172,3 +184,55 @@ header { width: 100vw; }
 
 .con3-house p { font-size: 0.625rem;}
 .con3-house h3 { font-size: 2rem; }
+
+
+/* con4 style sheet */
+.con4 { width: 100vw; overflow: hidden;}
+
+/* con5 style sheet */
+.con5 { display: grid;}
+
+.con5-world_news {
+  background-color: var(--text-color);
+  padding: 2rem var(--mobile-gap);
+}
+.con5-world_news h3 { 
+  color: var(--base-color);  
+  font-size: 1.5rem; 
+  font-weight: 400; 
+  text-align: center;
+  padding-bottom: 1.5rem;
+}
+.con5-world_news span { 
+  color: var(--base-color);
+  font-weight: 300; 
+  line-height: 150%;
+  letter-spacing: -0.02em;
+}
+
+/* con7 style sheet */
+.con7 { width: 100vw; overflow: hidden;}
+/* auto-scroll style sheet */
+.auto-scroll { 
+  border-top: solid 1px var(--line-color);
+  height: 5rem; 
+  overflow: hidden;
+  padding: var(--mobile-gap) 0;
+  margin: 0 var(--mobile-gap);
+}
+.auto-scroll p {
+  font-size: 40px;
+  text-align: center;
+  white-space: nowrap;
+}
+/* footer style sheet */
+footer {
+  align-items: flex-end;
+  background-color: var(--text-color);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--mobile-gap);
+  padding-top: 2rem;
+}
+footer span {  color: rgba(191, 191, 191, 1); font-size: 0.5rem; }
+footer img { width: 36px; }
