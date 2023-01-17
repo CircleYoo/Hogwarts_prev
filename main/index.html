@@ -14,24 +14,41 @@
       rel="stylesheet"
     />
 
+    <!-- font awesome -->
     <script src="https://kit.fontawesome.com/77ad8525ff.js" crossorigin="anonymous"></script>
 
-    <!-- 폰트어썸 연결하기 -->
+    <!-- favicon -->
+    <link rel="shortcut icon" sizes="16x16" href="img/common/Logo-favicon.png" type="image/x-icon">
+    <link rel="icon" href="img/common/Logo-favicon.png" type="image/x-icon">
+
     <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
+    <div class="overlay"></div>
     <header>
-      <nav id="nav_search"><input type="search" /></nav>
-      <div id="nav_title">
+      <nav id="nav-search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="search" />
+      </nav>
+      <div id="head-title">
         <img src="img/common/Logo_Default.svg" alt="Hogwart-Logo" />
-        <h1>hogwarts school</h1>
-        <h3>of witchcraft and wizardry</h3>
+        <div id="head-title-text">
+          <h1>hogwarts school</h1>
+          <h3>of witchcraft and wizardry</h3>
+        </div>
       </div>
-      <nav id="nav_menu">
-        <div>
-          <p>2023-01-05</p>
-          <img src="img/header/Nav_menu_icon.svg" alt="" />
-          <a href="#">
+      <nav id="nav-menu-wrap">
+        <div id="nav-menu">
+          <p id="name-menu-date">2023-01-05</p>
+          <div id="wide-menu">
+            <p>about</p>
+            <p>news</p>
+            <p>houses</p>
+            <p>support</p>
+            <p>community</p>
+          </div>
+          <img id="mobile-menu" src="img/header/Nav_menu_icon.svg" alt />
+          <a href="#" id="user-info">
             <img src="img/header/Nav_Info_SortingHat.svg" alt="" />
           </a>
         </div>
@@ -67,7 +84,7 @@
               <tbody class="cal-body"></tbody>
             </table>
           </div>
-          <div>
+          <div class="calendar-sub">
             <p>Calender</p>
             <h3>오늘의 일정</h3>
             <span>1/27 : 퀴디치 (그리핀도르 vs 후플푸프)</span>
@@ -88,12 +105,15 @@
         </div>
       </section>
       <section class="mainCon">
-        <h1>Draco Dormiens Nunquam Titillandus</h1>
+        <h1>
+          Draco Dormiens <br>
+          Nunquam Titillandus
+        </h1>
       </section>
       <section class="con2">
         <article id="con2-first">
-            <video src="img/con2/Article_2.mp4 " autoplay muted></video>
-            <h1>Welcome to hogwarts!</h1>
+            <video src="img/con2/Article_2.mp4 " autoplay muted loop></video>
+            <h1>Welcome to HOGWARTS!</h1>
             <span>
                 세계 최고의 명문, 호그와트 마법학교 입학을 환영합니다! 다가오는 봄 캠퍼스에서 만나기 앞서 입학준비를 위한 전반적인 사항에 대해 참고하시기 바랍니다. 교과과정을 반영한 똑똑한 입학 준비로 학교 생활을 더욱 자신있게 보내보세요!
             </span>
@@ -123,29 +143,205 @@
 
       </section>
       <section class="con3">
-        <div>
+        <div class="con3-house">
             <img src="img/con3/Gryffindor.svg" alt="">
-            <p>Points</p>
-            <p>9,453</p>
+            <div class="con3-score">
+              <p>Points</p>
+              <h3>9,453</h3>
+            </div>
         </div>
-        <div>
+        <div class="con3-house">
             <img src="img/con3/Revanclaw.svg" alt="">
-            <p>Points</p>
-            <p>7,954</p>
+            <div class="con3-score">
+              <p>Points</p>
+              <h3>7,954</h3>
+            </div>
         </div>
-        <div>
+        <div class="con3-house">
             <img src="img/con3/Slytherin.svg" alt="">
-            <p>Points</p>
-            <p>8,731</p>
+            <div class="con3-score">
+              <p>Points</p>
+              <h3>8,731</h3>
+            </div>
         </div>
-        <div>
+        <div class="con3-house">
             <img src="img/con3/Hufflepuff.svg" alt="">
-            <p>Points</p>
-            <p>7,276</p>
+            <div class="con3-score">
+              <p>Points</p>
+              <h3>7,276</h3>
+            </div>
         </div>
       </section>
+      <section class="con4">
+        <div class="blog-header blog-is-sticky">
+          <div class="blog-article header-article">
+            <div class="blog-big_title">Let's be</div>
+            <div class="blog-article page-number">NO.1</div>
+          </div>
+        </div>
+        <div class="blog-header-container">
+          <div class="blog-header">
+            <div class="blog-article header article">
+              <div class="blog-big_title">BRAVE</div>
+            </div>
+            <div class="header-article">
+              <img src="img/con4/Article_1.jpg" alt>
+              <h2>세상을 구한 감동과 희망의 주인공들, 멀린 1등급 훈장 받는다</h2>
+              <span>7학년 해리 포터, 론 위즐리, 헤르미온느 그레인저가 멀린 1등급 훈장을 받게 된다. 이들은 세계 2차 마법사 전쟁에서  볼드모트의 모든 호크룩스를 파괴하고 그를 처단했다. </span>
+              <div class="Read-Btn">
+                <a href="#">
+                    <span>Read More</span>
+                    <span>January. 13. 2023</span>
+                </a>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="blog-header">
+            <div class="blog-article header article">
+              <div class="blog-big_title">FRIENDS</div>
+            </div>
+            <div class="header-article">
+              <img src="img/con4/Article_2.jpg" alt>
+              <h2>집요정 복지 향상을 위한 S.P.E.W. 회원 모집</h2>
+              <span>S.P.E.W는 집요정 권리를 보호하기 위한 단체입니다. 꼬마집요정의 권리와 처우 개선에 기여할 회원을 모집합니다. </span>
+              <div class="Read-Btn">
+                <a href="#">
+                    <span>Read More</span>
+                    <span>January. 13. 2023</span>
+                </a>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+          <div class="blog-header">
+            <div class="blog-article header article">
+              <div class="blog-big_title">BETTER</div>
+            </div>
+            <div class="header-article">
+              <img src="img/con4/Article_3.jpg" alt>
+              <h2>‘입닥쳐, 말포이’ 교실 속까지 만연해진 언어폭력 이대로 괜찮은가?</h2>
+              <span>방관하는 교우들 묵인하는 교육자들, “친구끼리 생기는 일에 제가 개입해도 되는걸까요?“ 과연 당사자의 의견은 어떤지 취재를 시도해보았다.</span>
+              <div class="Read-Btn">
+                <a href="#">
+                    <span>Read More</span>
+                    <span>January. 13. 2023</span>
+                </a>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="blog-part right-blog">
+          <div class="blog-right">
+            <div class="blog-right-container">
+              <span class="blog-right-menu">notice</span>
+              <span class="blog-right-title">재학생 안전을 위한 금지된 숲 출입금지 안내</span>
+              <span class="blog-right-date">March. 10. 2023</span>
+            </div>
+            <div class="blog-right-container">
+              <span class="blog-right-menu">notice</span>
+              <span class="blog-right-title">2023년도 1학기 파견 교환학생
+                모집 안내</span>
+              <span class="blog-right-date">March. 10. 2023</span>
+            </div>
+            <div class="blog-right-container">
+              <span class="blog-right-menu">community</span>
+              <span class="blog-right-title">울보 머틀 때문에 화장실을
+                못 쓰겠어요.</span>
+              <span class="blog-right-date">March. 10. 2023</span>
+            </div>
+            <div class="blog-right-container">
+              <span class="blog-right-menu">community</span>
+              <span class="blog-right-title">기숙사 점수 시스템에 대한 
+                재심사를 요청드립니다.</span>
+              <span class="blog-right-date">March. 10. 2023</span>
+            </div>
+            <div class="blog-right-container">
+              <span class="blog-right-menu">ravenclaw</span>
+              <span class="blog-right-title">춘추복 가디건, 조끼 S사이즈  
+                나눔합니다</span>
+              <span class="blog-right-date">March. 10. 2023</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="con5">
+        <div class="con5-categories">
+          <div>
+            <img src="img/con5/Menu_School.svg" alt>
+            <span>학교규정</span>
+          </div>
+          <div>
+            <img src="img/con5/Menu_Library.svg" alt>
+            <span>도서관</span>
+          </div>
+          <div>
+            <img src="img/con5/Menu_Grades.svg" alt>
+            <span>교육과정</span>
+          </div>
+          <div>
+            <img src="img/con5/Menu_Fund.svg" alt>
+            <span>발전기금</span>
+          </div>
+        </div>
+        <div class="con5-today_menu">
+          <h3>today's menu</h3>
+          <ul>
+            <li>버터맥주 or 화이어위스키</li>
+            <li>치아씨, 해초 주키니 호박으로 만든 악마의 덫</li>
+            <li>양파와 시나몬이 가미된 양고기 스테이크</li>
+            <li>소고기에 빵과 닭고기를 간 파르페를 곁들인 모자걸이</li>
+            <li>월계수잎 아이스크림</li>
+          </ul>
+        </div>
+        <div class="con5-world_news">
+          <h3>WORLD NEWS</h3>
+          <span>
+            코로나19 감염병은 전 세계 1,000만 명 이상의 감염자와 50만 명의 사망자를 발생시키며 글로벌 위기를 가져왔다. <br/>
+            미스테리학부와 마법생명체통제관리부는 전례없는 사건을 파악하기 위해 머글 세게와 공동 협력을 진행했다. 미스테리학부 관계자는 “앞으로도 주요국가와 관련 상황 등을 공유하고, 코로나 19 대응을 위한 협력을 지속해 나갈 예정”이라 전했다. 
+          </span>
+        </div>
+      </section>
+      <section class="con6">
+        <div class="card-wrapper">
+          <div class="card">
+            <div class="card-front">
+               <p>I</p>
+                <img src="img/con6/Charms.svg" alt="">
+               <p>Charms</p>
+            </div>
+            <div class="card-back">
+              <span>일반마법</span>
+              <span>필리우스 플리트윅</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="con7">
+        <div>
+          <img src="img/con7/Ollivanders.jpg" alt="">
+          <h3>호그와트 x 올리밴더스 제휴할인 실시</h3>
+          <span>재학생과 신입생, 그리고 직급과 관계없이 모든 교직원이 혜택을
+            이용할 수 있습니다. 안전하고 효율적인 교육환경을 준비해보세요.</span>
+        </div>
+        <div>
+          <img src="img/con7/Express.jpg" alt="">
+          <h3>호그와트 익스프레스 정기승차권 안내</h3>
+          <span>
+            쾌적한 열차 서비스와 호그와트 익스프레스의 안전운행을 위해 정기승차권 서비스를 제공합니다. 편리하고 경제적인 정기권을 이용하세요.
+          </span>
+        </div>
+      </section>
+      <section class="auto-scroll">I Open At The Close.</section>
     </main>
-    <footer></footer>
+    <footer>
+      <span>
+        Hogwarts School of Witchcraft and Wizardry <br>
+        Never go into a forbidden forest.
+      </span>
+       <img src="img/common/Logo_White.svg" alt="">
+    </footer>
   </body>
   <script src="js/callender.js"></script>
 </html>
