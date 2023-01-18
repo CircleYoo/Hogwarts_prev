@@ -1,0 +1,132 @@
+/* main_con4 style sheet */
+.main_con4 {
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  grid-template-rows: 100%;
+  /* height: 90vh; */
+  max-height: 1000px;
+  overflow: hidden;
+  padding: 0 var(--mobile-gap) 2rem;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main_blog-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* con4 - 고정 영역 */
+.main_blog-is-sticky {
+  justify-content: space-between;
+}
+.main_blog-is-sticky > .main_header-article {
+  border-right: 1px solid var(--line-color);
+  justify-content: flex-end;
+}
+.main_blog-is-sticky > .main_blog-big_title {
+  margin-right: 2vw;
+}
+.main_blog-big_title {
+  font-size: 6.45vw;
+  font-weight: 600;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--line-color);
+  letter-spacing: -0.05em;
+}
+.main_page-number {
+  text-align: right;
+  font-weight: 600;
+  font-size: 4.16vw;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+/* con4 - 기사 */
+.main_blog-header-container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  border-right: 1px solid var(--line-color);
+}
+.main_blog-header-container > * {
+  flex-shrink: 0;
+  min-height: 100%;
+  scroll-snap-align: start;
+}
+.main_blog-header-container .main_blog-big_title {
+  margin: 0 2vw;
+}
+.main_header-article {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2vw;
+}
+
+.main_header-article img {
+  border: var(--line-color);
+  height: 384px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  max-height: 36vh;
+  width: 100%;
+}
+.main_header-article h2 {
+  font-family: "suit";
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+.main_header-article span {
+  font-size: 1.25rem;
+}
+
+.main_header-article > .main_Read-Btn {
+  border-bottom: 1px solid var(--line-color);
+  padding-bottom: 3rem;
+  margin-bottom: 3rem;
+}
+
+
+/* con4 - 우측 게시판 */
+.main_right-blog {
+  overflow: auto;
+}
+.main_blog-right {
+  padding-left: 2vw;
+}
+.main_blog-right-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--line-color);
+}
+.main_blog-right-container:not(:first-child) {
+  margin: 40px 0;
+}
+
+.main_blog-right-menu {
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.main_blog-right-title {
+  font-weight: 500;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+}
+.main_blog-right-date {
+  color: var(--point-color);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  text-transform: capitalize;
+}

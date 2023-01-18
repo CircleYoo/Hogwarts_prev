@@ -33,9 +33,9 @@ const init = {
     }
   };
   
-  const $calBody = document.querySelector('.cal-body');
-  const $btnNext = document.querySelector('.btn-cal.next');
-  const $btnPrev = document.querySelector('.btn-cal.prev');
+  const $calBody = document.querySelector('.main_cal-body');
+  const $btnNext = document.querySelector('.main_btn-cal.next');
+  const $btnPrev = document.querySelector('.main_btn-cal.prev');
   
   /**
    * @param {number} date
@@ -57,8 +57,8 @@ const init = {
       markToday = init.today.getDate();
     }
   
-    document.querySelector('.cal-month').textContent = init.monList[mm];
-    document.querySelector('.cal-year').textContent = yy;
+    document.querySelector('.main_cal-month').textContent = init.monList[mm];
+    document.querySelector('.main_cal-year').textContent = yy;
   
     let trtd = '';
     let startCount;
