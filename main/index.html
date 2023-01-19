@@ -27,9 +27,20 @@
   <body>
     <div class="main_overlay"></div>
     <header>
-      <nav id="main_nav-search">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="search" />
+      <nav id="main_nav-top">
+        <div id="main_nav-music">
+          <i class="fa-solid fa-signal"></i>
+        </div>
+        <div id="main_nav-search">
+          <div class="main_search-container">
+            <input type="search" placeholder="Search"/>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <div class="main_search-container inverted">
+            <input type="search" placeholder="Search"/>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>	
       </nav>
       <div id="main_head-title">
         <img src="img/common/Logo_Default.svg" alt="Hogwart-Logo" />
@@ -40,7 +51,7 @@
       </div>
       <nav id="main_nav-menu-wrap">
         <div id="main_nav-menu">
-          <p id="main_name-menu-date">2023-01-05</p>
+          <p id="main_nav-menu-date"></p>
           <div id="main_wide-menu">
             <p>about</p>
             <p>news</p>
@@ -222,8 +233,8 @@
             </div>
             <div class="main_header-article">
               <img src="img/con4/Article_3.jpg" alt>
-              <h2>‘입닥쳐, 말포이’ 교실 속까지 만연해진 언어폭력 이대로 괜찮은가?</h2>
-              <span>방관하는 교우들 묵인하는 교육자들, “친구끼리 생기는 일에 제가 개입해도 되는걸까요?“ 과연 당사자의 의견은 어떤지 취재를 시도해보았다.</span>
+              <h2>'입닥쳐, 말포이' 교실 속까지 만연해진 언어폭력 이대로 괜찮은가?</h2>
+              <span>방관하는 교우들 묵인하는 교육자들, "친구끼리 생기는 일에 제가 개입해도 되는걸까요?" 당사자의 의견은 어떤지 취재를 시도해보았다.</span>
               <div class="main_Read-Btn">
                 <a href="#">
                     <span>Read More</span>
@@ -265,7 +276,7 @@
                 나눔합니다</span>
               <span class="main_blog-right-date">March. 10. 2023</span>
             </div>
-            <div class="main_blog-right-container">
+            <!-- <div class="main_blog-right-container">
               <span class="main_blog-right-menu">Gryffindor</span>
               <span class="main_blog-right-title">벽난로 자리 눈치 준다는 저학년 읽어라</span>
               <span class="main_blog-right-date">March. 10. 2023</span>
@@ -274,7 +285,7 @@
               <span class="main_blog-right-menu">Gryffindor</span>
               <span class="main_blog-right-title">왜 저학년이 벽난로 자리에 앉으면 눈치 주는데?</span>
               <span class="main_blog-right-date">March. 10. 2023</span>
-            </div>
+            </div> -->
             <div class="main_blog-right-container">
               <span class="main_blog-right-menu">Hufflepuff</span>
               <span class="main_blog-right-title">스프라우트 교수님 생신 선물 같이 준비할 사람!</span>
@@ -321,7 +332,32 @@
         </div>
       </section>
       <section class="main_con6">
+        <div>
+          <p class="main_con6-hr-sect">professor</p>
+        </div>
         <div class="main_con6_card-wrapper">
+          <div class="main_con6_card">
+            <div class="main_con6_card-front">
+               <p>I</p>
+                <img src="img/con6/Charms.svg" alt="">
+               <p>Charms</p>
+            </div>
+            <div class="main_con6_card-back">
+              <span>일반마법</span>
+              <span>필리우스 플리트윅</span>
+            </div>
+          </div>
+          <div class="main_con6_card">
+            <div class="main_con6_card-front">
+               <p>I</p>
+                <img src="img/con6/Charms.svg" alt="">
+               <p>Charms</p>
+            </div>
+            <div class="main_con6_card-back">
+              <span>일반마법</span>
+              <span>필리우스 플리트윅</span>
+            </div>
+          </div>
           <div class="main_con6_card">
             <div class="main_con6_card-front">
                <p>I</p>
@@ -364,5 +400,6 @@
        <img src="img/common/Logo_White.svg" alt="">
     </footer>
   </body>
+  <script src="js/index.js"></script>
   <script src="js/callender.js"></script>
 </html>
