@@ -80,7 +80,7 @@
                         <img src="${item.front_icon}" alt="">
                     <p>${item.front_subject}</p>
                 </div>
-                <div class="main_con6_card-back" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.78%, rgba(0, 0, 0, 0.8) 100%), url('${item.back_img}'); background-size: contain;" >
+                <div class="main_con6_card-back" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.78%, rgba(0, 0, 0, 0.8) 100%), url('${item.back_img}'); background-size: cover;" >
                     <span>${item.back_subject}</span>
                     <span>${item.back_professor}</span>
                 </div>
