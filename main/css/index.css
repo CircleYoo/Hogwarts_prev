@@ -387,7 +387,7 @@ header {
   object-fit: cover;
 }
 #main_con2-first h1 {
-  font-size: 2.5rem;
+  font-size: 10.5vw;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -567,9 +567,10 @@ header {
 .main_blog-right-menu {
   grid-row: 1 / 3;
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: clamp(0.5rem, 3vw, 0.75rem);
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  overflow-wrap: break-word;
 }
 .main_blog-right-title {
   font-weight: 500;
@@ -700,7 +701,6 @@ header {
   grid-template-rows: repeat(6, 1fr);
 }
 .main_con6_card {
-  position: relative;
   transition: all .4s;
   transform-style: preserve-3d;
 }
@@ -714,13 +714,21 @@ header {
   backface-visibility: hidden;  /* 뒷면 숨기기 */
 }
 .main_con6_card-front {
-  background:  no-repeat center url(../img/con6/frame.svg);
-  background-size: 90% 90%;
+  /* background:  no-repeat center url(../img/con6/frame.svg);
+  background-size: 90% 90%; */
   background-color: #ded2b7;
   mix-blend-mode: multiply;
   text-align: center;
-  padding: 1rem 0;
+  padding: 0.5rem;
   /* height: 100%; */
+}
+.main_con6_card-border {
+    border-style: solid;
+    border-width: 0.5rem;
+    -moz-border-image: url(../img/con6/frame.svg) 5;
+    -webkit-border-image: url(../img/con6/frame.svg) 5;
+    -o-border-image: url(../img/con6/frame.svg) 5;
+    border-image: url(../img/con6/frame.svg) 5;
 }
 .main_con6_card-back {
   position: absolute;
