@@ -17,6 +17,33 @@
     $navDate.innerHTML = $today;
 
 
+
+    // main_mobile-toggle 버티컬 탭
+    const tabParent = document.querySelectorAll('.main_mobile-parent li');
+    const tapChild = document.querySelectorAll('#main_mobile-child-wrap ul')
+    let activeCont = ''; // 현재 활성화 된 컨텐츠 
+
+    for(let i=0; i<tabParent.length; i++) {
+        tabParent[i].querySelector('a').addEventListener('click', function(e){
+            e.preventDefault();
+            console.log(e.target)
+            for(var j = 0; j < tabParent.length; j++){
+                // 나머지 버튼 클래스 제거
+                tabParent[j].classList.remove('is_on');
+        
+                // 나머지 컨텐츠 display:none 처리
+                tapChild[j].style.display = 'none';
+            }
+            // 버튼 관련 이벤트
+            this.parentNode.classList.add('is_on');
+
+            // 버튼 클릭시 컨텐츠 전환
+            activeCont = this.getAttribute('href');
+            document.querySelector(activeCont).style.display = 'flex';
+        });
+    }
+
+
     // con3 기숙사 점수 카운팅
     const counter = ($counter, max) => {
         let now = max;
@@ -82,8 +109,10 @@
                 </div>
                 </div>
                 <div class="main_con6_card-back" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.78%, rgba(0, 0, 0, 0.8) 100%), url('${item.back_img}'); background-size: cover;" >
-                    <span>${item.back_subject}</span>
-                    <span>${item.back_professor}</span>
+                    <div>
+                        <span>${item.back_subject}</span>
+                        <span>${item.back_professor}</span>
+                    </div>
                 </div>
         `;
         return div;
@@ -109,7 +138,7 @@
     //     cardTarget.removeEventListener('click', backFlipper);
     // }
 
+    // 텍스트 좌우 롤링
+
 
 })();
-
-
