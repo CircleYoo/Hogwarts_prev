@@ -286,13 +286,20 @@ header {
 
 /* main_mobile-toggle style sheet */
 #main_mobile-toggle {
+  /* display: none; */
+  height: 0;
+  overflow: hidden;
+  transition: all 0.5s cubic-bezier(.8, .5, .2, 1.4);
+
+}
+.active {
   border-bottom: 1px solid var(--line-color);
-  display: grid;
+  display: grid !important;
   grid-template-columns: 1fr 1fr;
-  height: 22.5rem;
-  padding: 0 var(--mobile-gap);
+  height: 22.5rem !important;
   width: 100%;
 }
+
 
 .main_mobile-parent {
   border-right: 1px solid var(--line-color);
@@ -303,10 +310,12 @@ header {
 }
 
 .main_mobile-parent li {
+  padding-left: var(--mobile-gap);
   border-bottom: 1px solid var(--line-color);
   position: relative;
   flex-grow: 1;
   display: flex;
+  transition: all .35s;
 }
 
 .main_mobile-parent li a {
@@ -323,7 +332,9 @@ header {
   /* display: none; */
   background-color: #333;
 }
-
+.main_mobile-parent li:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
 .main_mobile-parent li:hover a{
   color: var(--point-color);
 }
@@ -497,11 +508,11 @@ header {
 }
 
 .main_mainCon h1 {
-  bottom: 1.5rem;
+  bottom: 0;
   color: var(--text-reverse-color);
   font-weight: 500;
   font-size: 2rem;
-  left: 1.5rem;
+  padding: 6.25vw;
   position: absolute;
 }
 
@@ -768,6 +779,10 @@ header {
   padding: 3rem 0;
   text-align: center;
   width: 100%;
+  transition: all 0.2s ease-out;
+}
+.main_con5-categories div:hover {
+  background-color: rgba(0, 0, 0, 0.03);
 }
 
 #main_con5-box1,
@@ -793,7 +808,7 @@ header {
 /* main_con5 -  오늘 식단표 */
 .main_con5-today_menu {
   border: 1px solid var(--gryffindor-color);
-  padding: 2rem;
+  padding: 8vw;
   text-align: center;
 }
 

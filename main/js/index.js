@@ -17,6 +17,12 @@
     $navDate.innerHTML = $today;
 
 
+    // main_mobile-menu 메뉴 펼치기
+    const $menuBtn = document.querySelector('#main_mobile-menu img')
+    const $mobileTap = document.querySelector('#main_mobile-toggle')
+    $menuBtn.addEventListener('click', function() {
+        $mobileTap.classList.toggle('active')
+    })
 
     // main_mobile-toggle 버티컬 탭
     const tabParent = document.querySelectorAll('.main_mobile-parent li');
@@ -24,7 +30,7 @@
     let activeCont = ''; // 현재 활성화 된 컨텐츠 
 
     for(let i=0; i<tabParent.length; i++) {
-        tabParent[i].querySelector('a').addEventListener('click', function(e){
+        tabParent[i].addEventListener('click', function(e){
             e.preventDefault();
             console.log(e.target)
             for(var j = 0; j < tabParent.length; j++){
@@ -38,7 +44,7 @@
             this.parentNode.classList.add('is_on');
 
             // 버튼 클릭시 컨텐츠 전환
-            activeCont = this.getAttribute('href');
+            activeCont = this.querySelector('a').getAttribute('href');
             document.querySelector(activeCont).style.display = 'flex';
         });
     }
