@@ -93,19 +93,53 @@ span {
 .main_Read-Btn {
   align-items: flex-end;
   display: flex;
-  font-weight: 500;
   justify-content: space-between;
   letter-spacing: -0.02em;
+  font-weight: 500;
+}
+.main_Read-more::before {
+  /* display: block; */
+  content: "";
+  /* padding-top: 4px; */
+  border-bottom: 1px solid var(--text-color);
+  z-index: 1;
+  transform: scaleX(0);
+  transform-origin: right;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  transition: transform .3s ease-out;
+}
+.main_Read-more::after {
+  content: "";
+  border-bottom: 1px solid var(--text-color);
+  z-index: 1;
+  transform: scaleX(1);
+  transform-origin: left;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  transition: transform .3s ease-in;
 }
 
-.main_Read-Btn a span:first-child {
-  border-bottom: solid 1px var(--text-color);
+.main_Read-more:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition-delay: .3s;
+}
+.main_Read-more:hover::after{
+  transform: scaleX(0);
+  transform-origin: right;
+  transition-delay: 0.1s;
 }
 
 
 .main_Read-Btn a span:last-child {
   display: block;
   color: var(--point-color);
+  margin-top: 0.2rem;
 }
 
 #TopBtn {
