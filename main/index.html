@@ -144,7 +144,7 @@
         <div class="main_calendar-sub">
           <p>Calender</p>
           <h3>오늘의 일정</h3>
-          <span>1/27 : 퀴디치 (그리핀도르 vs 후플푸프)</span>
+          <span id="main_match"></span>
         </div>
       </div>
       <div class="main_song">
@@ -402,8 +402,12 @@
         </span>
       </div>
     </section>
-    <div class="main_auto-scroll" id="text-roller">
-      <p>I Open At The Close.</p>
+    <div class="main_auto-scroll">
+      <div class="main_auto-scroll-wrap">
+        <p class="main_auto-scroll-roller">
+          I Open At The Close.&nbspI Open At The Close.&nbspI Open At The Close.&nbspI Open At The Close.&nbspI Open At The Close.&nbsp
+        </p>
+      </div>
     </div>
   </main>
   <footer>
@@ -416,5 +420,5 @@
 </body>
 <script src="js/index.js"></script>
 <script src="js/callender.js"></script>
-
+<script src="js/rollingText.js"></script>
 </html>

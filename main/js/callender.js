@@ -74,18 +74,20 @@ const init = {
         } else {
           let fullDate = yy + '.' + init.addZero(mm + 1) + '.' + init.addZero(countDay + 1);
           trtd += '<td class="day';
-          trtd += (markToday && markToday === countDay + 1) ? ' today" ' : '"';
-          trtd += ` data-date="${countDay + 1}" data-fdate="${fullDate}">`;
+          trtd += (markToday && markToday === countDay + 1) ? ' today"' : '"';
+          trtd += `data-date="${countDay + 1}" data-fdate="${fullDate}">`;
         }
-        trtd += (startCount) ? ++countDay : '';
+        trtd += (startCount) ? `<p class="dayElem">${++countDay}</p>` : '';
         if (countDay === lastDay.getDate()) { 
           startCount = 0; 
         }
         trtd += '</td>';
       }
       trtd += '</tr>';
+      
     }
     $calBody.innerHTML = trtd;
+
   }
   
   /**
@@ -97,9 +99,9 @@ const init = {
     let mm = init.activeDate.getMonth() + 1;
     let dd = init.activeDate.getDate();
     const $target = $calBody.querySelector(`.day[data-date="${dd}"]`);
-  
+    
     let date = yy + '.' + init.addZero(mm) + '.' + init.addZero(dd);
-  
+    
     let eventData = {};
     eventData['date'] = date;
     eventData['memo'] = val;
@@ -119,10 +121,18 @@ const init = {
       if (init.activeDTag) {
         init.activeDTag.classList.remove('day-active');
       }
-      let day = Number(e.target.textContent);
+      let day = Number(e.target.textContent); 
       e.target.classList.add('day-active');
       init.activeDTag = e.target;
       init.activeDate.setDate(day);
+    }
+    if (e.target.classList.contains('dayElem')) {
+      if (init.activeDTag) {
+        init.activeDTag.classList.remove('day-active');
+      }
+      init.activeDTag = e.target.parentElement;
+      init.activeDTag.classList.add('day-active')
+      console.log(e.target.parentNode)
     }
   });
   

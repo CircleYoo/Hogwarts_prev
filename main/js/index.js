@@ -49,6 +49,10 @@
         });
     }
 
+    // con1 - 달력 퀴디치 일정
+    const $match = `${month} / ${day} : 퀴디치 (그리핀도르 vs 후플푸프)`
+    const $matchDate = document.querySelector('#main_match')
+    $matchDate.innerHTML = $match;
 
     // con3 기숙사 점수 카운팅
     const counter = ($counter, max) => {
@@ -114,7 +118,7 @@
                     <p>${item.front_subject}</p>
                 </div>
                 </div>
-                <div class="main_con6_card-back" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.78%, rgba(0, 0, 0, 0.8) 100%), url('${item.back_img}'); background-size: cover;" >
+                <div class="main_con6_card-back" style="background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.78%, rgba(0, 0, 0, 0.8) 100%), url('${item.back_img}'); background-size: cover; background-position: center;" >
                     <div>
                         <span>${item.back_subject}</span>
                         <span>${item.back_professor}</span>
@@ -127,6 +131,7 @@
 
     getData();
     const $cardWrapper = document.querySelector('.main_con6_card-wrapper')
+    const $card= document.querySelector('.main_con6_card')
 
     // con6 card flip
     // $card.addEventListener('click', flipper)

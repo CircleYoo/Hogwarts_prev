@@ -17,6 +17,11 @@
   display: none;
 }
 
+::selection {
+  background-color: var(--point-color);
+  color: var(--text-reverse-color);
+}
+
 * {
   scroll-behavior: smooth;
   box-sizing: border-box;
@@ -96,6 +101,7 @@ span {
 .main_Read-Btn a span:first-child {
   border-bottom: solid 1px var(--text-color);
 }
+
 
 .main_Read-Btn a span:last-child {
   display: block;
@@ -259,6 +265,10 @@ header {
 
   margin: 0 var(--mobile-gap);
   padding: 1rem 0;
+
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 #main_nav-menu>p {
@@ -379,7 +389,7 @@ header {
 
 .main_calendar-box {
   border: 1px solid var(--line-color);
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -419,18 +429,37 @@ header {
 
 .main_cal-table thead tr th,
 .main_cal-body tr .day {
-  font-family: 'suit';
   height: 2rem;
+  font-family: 'suit';
   font-size: 0.75rem;
+  font-weight: 700;
 }
+.main_cal-body tr .day {
+  cursor: pointer;
+}
+
+.main_cal-body tr .day-active p{
+  background-color: rgba(0, 0, 0, 0.07);
+  border-radius: 20%;
+}
+.main_cal-body tr p {
+  font-family: 'suit';
+  padding: 0.2rem;
+  display: inline-table;
+  width: 1.5rem;
+
+}
+.main_cal-body tr .today p{
+  background-color: var(--point-color);
+  border-radius: 20%;
+  color: #fff;
+}
+
 
 .main_cal-table thead tr th {
   color: #888;
 }
 
-.main_cal-body tr .day {
-  font-weight: 700;
-}
 
 .main_calendar-sub p {
   display: inline;
@@ -998,13 +1027,25 @@ header {
   overflow: hidden;
   padding: var(--mobile-gap) 0;
   margin: 0 var(--mobile-gap);
+  display: flex;
+  align-items: center;
 
 }
-
-.main_auto-scroll p {
+.main_auto-scroll-wrap {
+  position: relative;
+  width: 100%;
+  height: inherit;
+  box-sizing: border-box;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.main_auto-scroll-roller {
   font-size: 40px;
   text-align: center;
   white-space: nowrap;
+  position: absolute;
+  
 }
 
 
