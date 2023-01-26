@@ -27,22 +27,23 @@
 
 <body>
   <div class="main_overlay"></div>
-  <!-- <a href="#top" id="TopBtn"><img src="img/common/TopBtn_Default.svg" alt=""></a> -->
+  <a href="#top" id="TopBtn"><img src="img/common/TopBtn_Default.svg" alt=""></a>
   <header>
     <nav id="main_nav-top">
       <div id="main_nav-music">
         <i class="fa-solid fa-signal"></i>
       </div>
-      <div id="main_nav-search">
-        <div class="main_search-container">
+      <!-- <div class="main_nav-search-wrapper"></div> -->
+      <div class="main_nav-search">
+        <div class="main_search-container" id="search-front">
           <input type="search" placeholder="Search" />
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-        <div class="main_search-container inverted">
+        <div class="main_search-container" id="search-back">
           <input type="search" placeholder="Search" />
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-      </div>
+    </div>
     </nav>
     <div id="main_head-title">
       <img src="img/common/Logo_Default.svg" alt="Hogwart-Logo" />
@@ -51,65 +52,65 @@
         <h3>of witchcraft and wizardry</h3>
       </div>
     </div>
-    <nav id="main_nav-menu-wrap">
-      <div id="main_nav-menu">
-        <p id="main_nav-menu-date"></p>
-        <div id="main_wide-menu">
-          <p>about</p>
-          <p>news</p>
-          <p>houses</p>
-          <p>support</p>
-          <p>community</p>
-        </div>
-        <div id="main_mobile-menu">
-          <img src="img/header/Nav_menu_icon.svg" alt />
-        </div>
-        <a href="#" id="main_user-info">
-          <img src="img/header/Nav_Info_SortingHat.svg" alt="" />
-        </a>
-      </div>
-      <nav id="main_mobile-toggle">
-        <ul class="main_mobile-parent">
-          <li><a href="#main_mobile-about">ABOUT</a></li>
-          <li><a href="#main_mobile-news">NEWS</a></li>
-          <li><a href="#main_mobile-house">HOUSE</a></li>
-          <li><a href="#main_mobile-support">SUPPORT</a></li>
-          <li><a href="#main_mobile-community">COMMUNITY</a></li>
-        </ul>
-        <div id="main_mobile-child-wrap">
-          <ul id="main_mobile-about" class="main_mobile-child">
-            <li><a href="#">설립이념</a></li>
-            <li><a href="#">교육과정</a></li>
-            <li><a href="#">교수진</a></li>
-            <li><a href="#">연혁</a></li>
-            <li><a href="#">캠퍼스 안내</a></li>
-          </ul>
-          <ul id="main_mobile-news" class="main_mobile-child">
-            <li><a href="#">공지사항</a></li>
-            <li><a href="#">교내일정</a></li>
-            <li><a href="#">식단표</a></li>
-            <li><a href="#">학교규정</a></li>
-            <li><a href="#">자료실</a></li>
-            <li><a href="#">발전기금</a></li>
-          </ul>
-          <ul id="main_mobile-house" class="main_mobile-child">
-          </ul>
-          <ul id="main_mobile-support" class="main_mobile-child">
-            <li><a href="#">취업정보</a></li>
-            <li><a href="#">유학정보</a></li>
-            <li><a href="#">교환학생</a></li>
-            <li><a href="#">장학안내</a></li>
-            <li><a href="#">장학FAQ</a></li>
-          </ul>
-          <ul id="main_mobile-community" class="main_mobile-child">
-            <li><a href="#">동아리활동</a></li>
-            <li><a href="#">기숙사게시판</a></li>
-            <li><a href="#">익명게시판</a></li>
-           </ul>
-        </div>
-      </nav>
-    </nav>
   </header>
+  <nav id="main_nav-menu-wrap">
+    <div id="main_nav-menu">
+      <p id="main_nav-menu-date"></p>
+      <div id="main_wide-menu">
+        <p>about</p>
+        <p>news</p>
+        <p>houses</p>
+        <p>support</p>
+        <p>community</p>
+      </div>
+      <div id="main_mobile-menu">
+        <img src="img/header/Nav_menu_icon.svg" alt />
+      </div>
+      <a href="#" id="main_user-info">
+        <img src="img/header/Nav_Info_SortingHat.svg" alt="" />
+      </a>
+    </div>
+    <nav id="main_mobile-toggle">
+      <ul class="main_mobile-parent">
+        <li><a href="#main_mobile-about">ABOUT</a></li>
+        <li><a href="#main_mobile-news">NEWS</a></li>
+        <li><a href="#main_mobile-house">HOUSE</a></li>
+        <li><a href="#main_mobile-support">SUPPORT</a></li>
+        <li><a href="#main_mobile-community">COMMUNITY</a></li>
+      </ul>
+      <div id="main_mobile-child-wrap">
+        <ul id="main_mobile-about" class="main_mobile-child">
+          <li><a href="#">설립이념</a></li>
+          <li><a href="#">교육과정</a></li>
+          <li><a href="#">교수진</a></li>
+          <li><a href="#">연혁</a></li>
+          <li><a href="#">캠퍼스 안내</a></li>
+        </ul>
+        <ul id="main_mobile-news" class="main_mobile-child">
+          <li><a href="#">공지사항</a></li>
+          <li><a href="#">교내일정</a></li>
+          <li><a href="#">식단표</a></li>
+          <li><a href="#">학교규정</a></li>
+          <li><a href="#">자료실</a></li>
+          <li><a href="#">발전기금</a></li>
+        </ul>
+        <ul id="main_mobile-house" class="main_mobile-child">
+        </ul>
+        <ul id="main_mobile-support" class="main_mobile-child">
+          <li><a href="#">취업정보</a></li>
+          <li><a href="#">유학정보</a></li>
+          <li><a href="#">교환학생</a></li>
+          <li><a href="#">장학안내</a></li>
+          <li><a href="#">장학FAQ</a></li>
+        </ul>
+        <ul id="main_mobile-community" class="main_mobile-child">
+          <li><a href="#">동아리활동</a></li>
+          <li><a href="#">기숙사게시판</a></li>
+          <li><a href="#">익명게시판</a></li>
+         </ul>
+      </div>
+    </nav>
+  </nav>
   <main>
     <section class="main_con1">
       <div class="main_calendar">
@@ -206,28 +207,28 @@
         <img src="img/con3/Gryffindor.svg" alt="">
         <div class="main_con3-score">
           <p>Points</p>
-          <h3 id="main_con3_cnt_g">0</h3>
+          <h3 class="main_con3_cnt" value="9453">0</h3>
         </div>
       </div>
       <div class="main_con3-house">
         <img src="img/con3/Revanclaw.svg" alt="">
         <div class="main_con3-score">
           <p>Points</p>
-          <h3 id="main_con3_cnt_r">0</h3>
+          <h3 class="main_con3_cnt" value="7954">0</h3>
         </div>
       </div>
       <div class="main_con3-house">
         <img src="img/con3/Slytherin.svg" alt="">
         <div class="main_con3-score">
           <p>Points</p>
-          <h3 id="main_con3_cnt_s">0</h3>
+          <h3 class="main_con3_cnt" value="8731">0</h3>
         </div>
       </div>
       <div class="main_con3-house">
         <img src="img/con3/Hufflepuff.svg" alt="">
         <div class="main_con3-score">
           <p>Points</p>
-          <h3 id="main_con3_cnt_h">0</h3>
+          <h3 class="main_con3_cnt" value="7267">0</h3>
         </div>
       </div>
     </section>
@@ -421,4 +422,5 @@
 <script src="js/index.js"></script>
 <script src="js/callender.js"></script>
 <script src="js/rollingText.js"></script>
+<script src="js/houseScore.js"></script>
 </html>

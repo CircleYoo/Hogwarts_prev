@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_nav-search{
+            width: 400px;
+            height: 350px;
+            position: relative;
+            margin: 10px;
+            transition: 0.4s;
+            transform-style: preserve-3d;
+            transform-origin: 50% 0%;
+            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0) translateZ(0px);
+          }
+          
+          #search-front,
+          #search-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+          }
+          
+          #search-front {
+            background: teal;
+          }
+          
+          #search-back  {
+            backface-visibility: hidden;
+            background: rgb(41, 40, 40);
+            transform: rotateX(-90deg) rotateY(0deg) rotateZ(0deg) translateY(50%);
+          }
+    </style>
+</head>
+<body>
+    <div class="main_nav-search">
+        <div class="main_search-container" id="search-front">
+          <input type="search" placeholder="Search" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="main_search-container" id="search-back">
+          <input type="search" placeholder="Search" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+</body>
+<script>
+
+        const cards = document.querySelectorAll(".main_nav-search")
+        for(const card of cards) {
+          card.addEventListener("click", flipper)
+        }
+        
+          function flipper (event) {
+            const target = event.currentTarget
+            target.style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0)"
+            target.addEventListener("click", innerFlipper)
+          }
+      
+          function innerFlipper (event) {
+            const target = event.currentTarget
+            target.style.transform = "rotateX(90deg) rotateY(0deg) rotateZ(0deg) translateY(-50%)"
+            target.addEventListener("click", flipper)
+            target.removeEventListener("click", innerFlipper)
+          }
+</script>
+</html>

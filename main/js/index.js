@@ -1,6 +1,32 @@
 (function() {
     'use strict'
+
     
+    //현재 위치를 기억하여 새로고침시 그자리를 유지한다.
+    history.scrollRestoration = "auto";
+
+    // header
+    // main_search-container 클릭 후 유지
+
+    // const cards = document.querySelectorAll(".main_nav-search")
+    // for(const card of cards) {
+    //   card.addEventListener("click", flipper)
+    // }
+    
+    //   function flipper (event) {
+    //     const target = event.currentTarget
+    //     target.style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0)"
+    //     target.addEventListener("click", innerFlipper)
+    //   }
+  
+    //   function innerFlipper (event) {
+    //     const target = event.currentTarget
+    //     target.style.transform = "rotateX(90deg) rotateY(0deg) rotateZ(0deg) translateY(-50%)"
+    //     target.addEventListener("click", flipper)
+    //     target.removeEventListener("click", innerFlipper)
+    //   }
+
+
     // main_nav-menu-date
     // 현재 날짜 출력 ex.2023-01-19
     const $navDate = document.querySelector('#main_nav-menu-date')
@@ -20,6 +46,7 @@
     // main_mobile-menu 메뉴 펼치기
     const $menuBtn = document.querySelector('#main_mobile-menu img')
     const $mobileTap = document.querySelector('#main_mobile-toggle')
+
     $menuBtn.addEventListener('click', function() {
         $mobileTap.classList.toggle('active')
     })
@@ -53,36 +80,6 @@
     const $match = `${month} / ${day} : 퀴디치 (그리핀도르 vs 후플푸프)`
     const $matchDate = document.querySelector('#main_match')
     $matchDate.innerHTML = $match;
-
-    // con3 기숙사 점수 카운팅
-    const counter = ($counter, max) => {
-        let now = max;
-      
-        const handle = setInterval(() => {
-          $counter.innerHTML = Math.ceil(max - now);
-        
-          // 목표수치에 도달하면 정지
-          if (now < 1) {
-            clearInterval(handle);
-          }
-          
-          // 증가되는 값이 계속하여 작아짐
-          const step = now / 10;
-          
-          // 값을 적용시키면서 다음 차례에 영향을 끼침
-          now -= step;
-        }, 50);
-      }
-      
-      window.onload = () => {
-        // 카운트를 적용시킬 요소
-        const $counter = document.querySelector(".main_con3-score > h3");
-        
-        // 목표 수치
-        const max = 17249;
-        
-        setTimeout(() => counter($counter, max), 2000);
-      }
     
     // con6
     // con6 card list 가져오기
@@ -147,9 +144,5 @@
     //     cardTarget.style.transform = 'rotateY(0deg)'
     //     cardTarget.addEventListener('click', flipper);
     //     cardTarget.removeEventListener('click', backFlipper);
-    // }
-
-    // 텍스트 좌우 롤링
-
-
+    // 
 })();

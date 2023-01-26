@@ -80,14 +80,14 @@ span {
 .main_overlay {
   background-image: url("../img/common/Background_texture.jpg");
   background-repeat: repeat;
-  opacity: 0.15;
+  opacity: 0.25;
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
 
-  mix-blend-mode: luminosity;
+  mix-blend-mode: darken;
 }
 
 .main_Read-Btn {
@@ -171,7 +171,7 @@ header {
 
 
 /* main_nav-search - 검색 */
-#main_nav-search {
+.main_nav-search {
   overflow: hidden;
   z-index: 10;
   position: relative;
@@ -191,7 +191,6 @@ header {
   transform-origin: 50% 0%;
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0) translateZ(0px);
   transition: transform 0.5s;
-
 }
 
 .main_search-container>input {
@@ -206,23 +205,23 @@ header {
   background-color: transparent;
 }
 
-.main_search-container.inverted>input,
-.main_search-container.inverted i {
+#search-back>input,
+#search-back i {
   opacity: 0;
   color: var(--base-color);
 }
 
-.main_search-container.inverted>input::placeholder {
+#search-back::placeholder {
   color: var(--base-color);
 }
 
-#main_nav-search i {
+.main_nav-search i {
   position: relative;
   padding-right: var(--mobile-gap);
   display: block;
 }
 
-.main_search-container.inverted {
+#search-back {
   background: var(--text-color);
   color: var(--base-color);
   position: absolute;
@@ -236,25 +235,33 @@ header {
 }
 
 /* main_nav-search - 호버 */
-#main_nav-search:hover>.main_search-container:not(.inverted) {
+.main_nav-search:hover> #search-front {
   transition: transform 0.35s;
   transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg) translateY(-50%);
 }
 
-#main_nav-search:hover>.main_search-container:not(.inverted)>input,
-#main_nav-search:hover>.main_search-container:not(.inverted) i {
+.main_nav-search:hover> #search-front >input,
+.main_nav-search:hover> #search-front i {
   opacity: 0;
 }
 
-#main_nav-search:hover>.main_search-container.inverted {
+.main_nav-search:hover> #search-back  {
   transition: transform 0.5s;
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0);
 }
 
-#main_nav-search:hover>.main_search-container.inverted input,
-#main_nav-search:hover>.main_search-container.inverted i {
+.main_nav-search:hover> #search-back input,
+.main_nav-search:hover> #search-back i {
   opacity: 1;
 }
+
+.main_search-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
 
 .main_search-container {
   display: flex;
@@ -270,6 +277,7 @@ header {
   padding: 2rem 0;
   text-align: center;
   text-transform: uppercase;
+  border-bottom: solid 1px var(--line-color);
 }
 
 #main_head-title img {
@@ -288,11 +296,20 @@ header {
 }
 
 /* main_nav-menu style sheet */
+#main_nav-menu-wrap {
+  background-image: url(../img/common/Background_texture-light.jpg);
+  background-repeat: repeat;
+
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
 #main_nav-menu {
   align-items: center;
 
   border-bottom: solid 1px var(--line-color);
-  border-top: solid 1px var(--line-color);
+
 
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -300,7 +317,6 @@ header {
   margin: 0 var(--mobile-gap);
   padding: 1rem 0;
 
-  position: sticky;
   top: 0;
   left: 0;
 }
@@ -330,18 +346,21 @@ header {
 
 /* main_mobile-toggle style sheet */
 #main_mobile-toggle {
-  /* display: none; */
+  background-image: url(../img/common/Background_texture-light.jpg);
+  background-repeat: repeat;
+  display: grid;
+
   height: 0;
   overflow: hidden;
   transition: all 0.5s cubic-bezier(.8, .5, .2, 1.4);
-
+  position: absolute;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  
 }
 .active {
   border-bottom: 1px solid var(--line-color);
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
   height: 22.5rem !important;
-  width: 100%;
 }
 
 
@@ -473,6 +492,7 @@ header {
 }
 
 .main_cal-body tr .day-active p{
+  transition :all 0.3s cubic-bezier(.42,.97,.52,3.49);
   background-color: rgba(0, 0, 0, 0.07);
   border-radius: 20%;
 }
@@ -570,6 +590,7 @@ header {
   margin: var(--mobile-gap);
 }
 
+
 .main_mainCon h1 {
   bottom: 0;
   color: var(--text-reverse-color);
@@ -660,20 +681,20 @@ header {
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
 
-  padding: 1rem 2rem;
+  padding: 4vw 8vw;
   margin: var(--mobile-gap);
 }
 
 .main_con3-house {
   align-items: center;
-  display: flex;
-
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 2vw;
   justify-content: center;
 }
 
 .main_con3-house img {
-  grid-row: 1 / 3;
-  width: 50%;
+  width: 100%;
 }
 
 .main_con3-house p {
@@ -681,7 +702,8 @@ header {
 }
 
 .main_con3-house h3 {
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 8vw, 2rem);
+  font-weight: 400;
   line-height: 1;
 }
 
