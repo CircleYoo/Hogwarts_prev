@@ -1,3 +1,162 @@
+/* main_nav-top - 최상단 */
+#main_nav-top {
+  height: 3rem;
+  grid-template-columns: 1rem 1fr;
+}
+#main_nav-music i {
+  font-size: 1.125rem;
+}
+/* main_nav-search - 검색 */
+.main_search-container {
+  height: 3rem;
+}
+.main_search-container > input,
+.main_search-container > input::placeholder,
+.main_search-container i {
+  font-size: 1.125rem;
+}
+
+/* main_head-title - 로고 */
+#main_head-title {
+  margin: 0 var(--display-gap);
+  padding: 3rem 0;
+  flex-direction: row;
+}
+#main_head-title img {
+  width: 120px;
+  margin-bottom: 0;
+}
+#main_head-title-text {
+  flex-grow: 1;
+}
+#main_head-title-text h1 {
+  font-size: 46px;
+}
+
+#main_head-title-text h3 {
+  font-size: 28px;
+}
+
+/* main_nav-menu style sheet */
+#main_nav-menu {
+  grid-template-columns: 1fr 3fr 1fr;
+  height: 6rem;
+}
+#main_nav-menu > p {
+  font-size: 1.25rem;
+}
+#main_wide-menu {
+  text-transform: uppercase;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  cursor: pointer;
+}
+#main_wide-menu p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+#main_mobile-menu {
+  display: none;
+}
+
+
+/* main_con1 style sheet */
+.main_con1 {
+  padding: 4rem 0;
+  margin: 0 var(--display-gap);
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  border-bottom: 1px solid var(--line-color);
+}
+
+/* main_con1 - 달력 */
+.main_calendar {
+  gap: 0.75rem;
+  grid-column: 1 / 2;
+  border-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+.main_calendar-box {
+  padding: 1rem;
+}
+
+.main_ctr-box {
+  align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.main_ctr-num {
+  order: 0;
+}
+
+.main_btn-cal+.next {
+  order: 1;
+}
+.main_cal-year {
+  font-size: 1.25rem;
+}
+.main_cal-month {
+  font-size: 3rem;
+}
+
+.main_cal-table thead tr th,
+.main_cal-body tr .day {
+  height: 2.25rem;
+  font-size: 0.875rem;
+}
+
+.main_ctr-box button i {
+  font-size: 1rem;
+}
+
+/* main_con1 - 교가 */
+.main_song {
+  border-left: 1px solid var(--line-color);
+  justify-content: center;
+  text-align: center;
+  gap: 2rem;
+  padding: 4vw;
+}
+
+.main_song h1 {
+  font-size: 2.5rem;
+}
+
+.main_song p {
+  font-size: 1.5rem;
+}
+
+/* main_con1 - 이달의 교수 */
+.main_awards {
+  gap: 1rem;
+  padding-left: 0;
+}
+
+.main_awards img {
+  width: 100%;
+  height: 22.75rem;
+}
+
+
+/* main_mainCon style sheet */
+.main_mainCon {
+  margin: 4rem 24vw 0 var(--display-gap);
+  height: 45rem;
+}
+.main_mainCon h1 {
+  font-size: 4rem;
+  padding: 3rem;
+}
+
+
+
 /* main_con4 style sheet */
 .main_con4 {
   display: grid;
@@ -93,7 +252,6 @@
   padding-bottom: 3rem;
   margin-bottom: 3rem;
 }
-
 
 /* con4 - 우측 게시판 */
 .main_right-blog {

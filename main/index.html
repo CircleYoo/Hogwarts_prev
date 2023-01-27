@@ -5,6 +5,9 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <meta http-equiv="page-enter" content="blendTrans(duration=0.3)">
+  <meta http-equiv="page-exit" content="blendTrans(duration=0.3)">
   <title>Hogwarts School</title>
 
   <!-- WebFont -->
@@ -22,7 +25,9 @@
   <link rel="icon" href="img/common/Logo-favicon.png" type="image/x-icon">
 
   <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" media="screen and (min-width:768px)" href="css/index-tablet.css" />
   <link rel="stylesheet" media="screen and (min-width:1024px)" href="css/index-desktop.css" />
+  <link rel="stylesheet" media="screen and (min-width:1920px)" href="css/index-desktopL.css" />
 </head>
 
 <body>
@@ -308,7 +313,7 @@
           </div>
           <div class="main_blog-right-container">
             <span class="main_blog-right-menu">community</span>
-            <span class="main_blog-right-title">울보 머틀 때문에 화장실을
+            <span class="main_blog-right-title"><span id="main_moaning-myrtle">울보 머틀 </span>때문에 화장실을
               못 쓰겠어요.</span>
             <span class="main_blog-right-date">March. 10. 2023</span>
           </div>
@@ -324,16 +329,16 @@
               나눔합니다</span>
             <span class="main_blog-right-date">March. 10. 2023</span>
           </div>
-          <!-- <div class="main_blog-right-container">
+          <div class="main_blog-right-container">
               <span class="main_blog-right-menu">Gryffindor</span>
               <span class="main_blog-right-title">벽난로 자리 눈치 준다는 저학년 읽어라</span>
               <span class="main_blog-right-date">March. 10. 2023</span>
             </div>
             <div class="main_blog-right-container">
               <span class="main_blog-right-menu">Gryffindor</span>
-              <span class="main_blog-right-title">왜 저학년이 벽난로 자리에 앉으면 눈치 주는데?</span>
+              <span class="main_blog-right-title">벽난로 자리에 왜 저학년이 앉으면 눈치 주세요?</span>
               <span class="main_blog-right-date">March. 10. 2023</span>
-            </div> -->
+            </div>
           <div class="main_blog-right-container">
             <span class="main_blog-right-menu">Hufflepuff</span>
             <span class="main_blog-right-title">스프라우트 교수님 생신 선물 같이 준비할 사람!</span>
@@ -372,13 +377,17 @@
         </ul>
       </div>
       <div class="main_con5-world_news">
-        <h3>WORLD NEWS</h3>
-        <span>
-          코로나19 감염병은 전 세계 1,000만 명 이상의 감염자와 50만 명의 사망자를 발생시키며 글로벌 위기를 가져왔다. <br />
-          <span>미스테리학부와 마법생명체통제관리부는 전례없는 사건을 파악하기 위해 머글 세게와 공동 협력을 진행했다. 미스테리학부 관계자는 “앞으로도 주요국가와 관련 상황 등을 공유하고, 코로나 19
-            대응을 위한 협력을 지속해 나갈 예정”이라 전했다.
-          </span>
-      </div>
+        <article class="main_con5-news-article">
+          <h3>WORLD NEWS</h3>
+          <span>
+            코로나19 감염병은 전 세계 1,000만 명 이상의 감염자와 50만 명의 사망자를 발생시키며 글로벌 위기를 가져왔다. <br />
+            <span>미스테리학부와 마법생명체통제관리부는 전례없는 사건을 파악하기 위해 머글 세게와 공동 협력을 진행했다. 미스테리학부 관계자는 “앞으로도 주요국가와 관련 상황 등을 공유하고, 코로나 19
+              대응을 위한 협력을 지속해 나갈 예정”이라 전했다.
+            </span>
+        </article>
+          <div class="main_con5-news-wrap">
+            <video src="img/con5/World_CoronaVirus.mp4" alt="" loop muted autoplay>
+          </div>
     </section>
     <section class="main_con6">
       <div>

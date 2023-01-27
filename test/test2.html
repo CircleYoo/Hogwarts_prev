@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="search" placeholder="search..." id="i1">
+    <input type="search" placeholder="search..." id="i2">
+</body>
+<script>
+    let $1 = document.querySelector('#i1');
+    console.log('$1')
+    let $2 = document.querySelector('#i2');
+    
+
+    $1.addEventListener('input', handleChange);
+
+    function handleChange(e) {
+        const value = e.target.value;
+        $2.value = value;
+    }
+    console.log($2.value)
+</script>
+</html>

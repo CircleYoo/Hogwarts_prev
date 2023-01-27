@@ -7,25 +7,19 @@
 
     // header
     // main_search-container 클릭 후 유지
-
-    // const cards = document.querySelectorAll(".main_nav-search")
-    // for(const card of cards) {
-    //   card.addEventListener("click", flipper)
-    // }
+    let $searchFront = document.querySelector('#search-front > input');
+    let $searchBack = document.querySelector('#search-back > input');
     
-    //   function flipper (event) {
-    //     const target = event.currentTarget
-    //     target.style.transform = "rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0)"
-    //     target.addEventListener("click", innerFlipper)
-    //   }
-  
-    //   function innerFlipper (event) {
-    //     const target = event.currentTarget
-    //     target.style.transform = "rotateX(90deg) rotateY(0deg) rotateZ(0deg) translateY(-50%)"
-    //     target.addEventListener("click", flipper)
-    //     target.removeEventListener("click", innerFlipper)
-    //   }
+    console.log($searchFront)
+    console.log($searchBack)
 
+    $searchBack.addEventListener('input', handleChange);
+
+    function handleChange(e) {
+        const value = e.target.value;
+        $searchFront.value = value;
+    }
+    console.log($searchFront.value)
 
     // main_nav-menu-date
     // 현재 날짜 출력 ex.2023-01-19

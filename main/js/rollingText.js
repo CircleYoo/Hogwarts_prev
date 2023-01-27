@@ -13,7 +13,7 @@
     document.querySelector(".main_auto-scroll-wrap").appendChild(clone); //부착
 
     //원본, 복제본 배너 위치 지정
-    document.querySelector("#roller1").style.left = "0px";
+    document.querySelector("#roller1").style.left = "0";
     document.querySelector("#roller2").style.left = document.querySelector(".main_auto-scroll-roller").offsetWidth + "px";
 
     //클래스 할당
