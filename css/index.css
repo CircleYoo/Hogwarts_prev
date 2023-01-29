@@ -340,6 +340,9 @@ header {
   width: 1.5rem;
 }
 
+#main_menu-toggle-wrap {
+  display: none;
+}
 /* main_mobile-toggle style sheet */
 #main_mobile-toggle {
   background-image: url(../img/common/Background_texture-light.jpg);
@@ -353,7 +356,7 @@ header {
   grid-template-columns: 1fr 1fr;
   width: 100%;
 }
-.active {
+.mobile-toggle-active {
   border-bottom: 1px solid var(--line-color);
   height: 22.5rem !important;
 }
@@ -580,6 +583,7 @@ header {
 .main_mainCon {
   background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(51, 51, 51, 0.2)), url(../img/main/Hogwarts.jpg);
   background-size: cover;
+  border: 1px solid var(--line-color);
   filter: grayscale(1);
   height: 22.5rem;
   position: relative;
@@ -623,10 +627,14 @@ header {
   font-weight: 600;
   letter-spacing: -0.02em;
 }
-
+#main_con2-first h1 br {
+  display: none;
+}
 #main_con2-first span {
+  letter-spacing: -0.02em;
   line-height: 150%;
   text-transform: capitalize;
+  text-align: justify;
 }
 
 #main_con2-first .main_Read-Btn {
@@ -764,7 +772,7 @@ header {
 }
 
 .main_header-article img {
-  border: var(--line-color);
+  border: 1px solid var(--line-color);
   /* height: 15rem; */
   -o-object-fit: cover;
   object-fit: cover;
@@ -1062,7 +1070,8 @@ header {
   border-top: 1px solid var(--line-color);
   gap: 2rem;
   grid-template-rows: repeat(2, 1fr);
-  padding: 2rem var(--display-gap);
+  margin: 0 var(--display-gap);
+  padding: 2rem 0;
 }
 
 .main_con7 div img {

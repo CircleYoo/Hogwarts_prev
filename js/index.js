@@ -36,13 +36,20 @@
 
     $navDate.innerHTML = $today;
 
+    // main_wide-menu 메뉴 펼치기
+    const $meneWideBtn = document.querySelector('#main_wide-menu')
+    const $WideTap = document.querySelector('#main_menu-toggle-wrap')
 
-    // main_mobile-menu 메뉴 펼치기
+    $meneWideBtn.addEventListener('click', function() {
+        $WideTap.classList.toggle('wide-toggle-active')
+    })
+
+    // main_mobile-menu 모바일 메뉴 펼치기
     const $menuBtn = document.querySelector('#main_mobile-menu img')
     const $mobileTap = document.querySelector('#main_mobile-toggle')
 
     $menuBtn.addEventListener('click', function() {
-        $mobileTap.classList.toggle('active')
+        $mobileTap.classList.toggle('mobile-toggle-active')
     })
 
     // main_mobile-toggle 버티컬 탭

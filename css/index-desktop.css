@@ -1,3 +1,13 @@
+/* Read More - 더보기 버튼 */
+.main_Read-Btn span {
+  font-size: 0.875rem;
+}
+
+.main_Read-Btn i {
+  font-size: 1.5rem;
+  text-align: right;
+}
+
 /* main_nav-top - 최상단 */
 #main_nav-top {
   height: 3rem;
@@ -21,13 +31,17 @@
   margin: 0 var(--display-gap);
   padding: 3rem 0;
   flex-direction: row;
+  position: relative;
 }
 #main_head-title img {
   width: 120px;
   margin-bottom: 0;
 }
+
 #main_head-title-text {
-  flex-grow: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 #main_head-title-text h1 {
   font-size: 46px;
@@ -39,7 +53,7 @@
 
 /* main_nav-menu style sheet */
 #main_nav-menu {
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1.1fr 6fr 1fr;
   height: 6rem;
 }
 #main_nav-menu > p {
@@ -48,7 +62,7 @@
 #main_wide-menu {
   text-transform: uppercase;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr) 1.1fr;
   cursor: pointer;
 }
 #main_wide-menu p {
@@ -56,15 +70,60 @@
   font-weight: 600;
   text-align: center;
 }
+#main_wide-menu p:not(:last-child) {
+  border-right: 1px solid var(--line-color);
+}
 
+/* menu-toggle - 메뉴 소제목 */
+#main_menu-toggle-wrap {
+  background-image: url(../img/common/Background_texture-light.jpg);
+  background-repeat: repeat;
+  display: grid;
+  grid-template-columns: 1.1fr 6fr 1fr;
+  padding: 0 var(--display-gap);
+  
+  height: 0;
+  overflow: hidden;
+  position: absolute;
+  transition: all 0.5s cubic-bezier(.8, .5, .2, 1.4);
+  width: 100%;
+}
+.wide-toggle-active {
+  padding: 2rem var(--display-gap) !important;
+  border-bottom: 1px solid var(--line-color);
+  height: 22.5rem !important;
+}
+
+
+#main_menu-toggle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 1.1fr;
+  text-align: center;
+}
+#main_menu-toggle ul:not(:last-child) {
+  border-right: 1px solid var(--line-color);
+}
+#main_menu-toggle ul li:not(:last-child) {
+  padding-bottom: 1.5rem;
+}
+#main_menu-toggle ul li a{
+  font-weight: 500;
+  font-family: "suit";
+}
+#main_menu-toggle ul li:hover a{
+  color: var(--point-color);
+}
 #main_mobile-menu {
   display: none;
 }
 
+.mobile-toggle-active {
+  display: none !important;
+}
 
 /* main_con1 style sheet */
 .main_con1 {
-  padding: 4rem 0;
+  padding: 3rem 0;
   margin: 0 var(--display-gap);
   gap: 1.5rem;
   grid-template-columns: repeat(3, 1fr);
@@ -147,7 +206,7 @@
 
 /* main_mainCon style sheet */
 .main_mainCon {
-  margin: 4rem 24vw 0 var(--display-gap);
+  margin: 3rem 24vw 0 var(--display-gap);
   height: 45rem;
 }
 .main_mainCon h1 {
@@ -157,17 +216,101 @@
 
 
 
+/* con2 style sheet */
+.main_con2 {
+  flex-direction: row;
+  padding-bottom: 0;
+  padding: 3rem 0 0 0;
+  margin: 3rem var(--display-gap);
+}
+
+/* main_con2 - 환영사 */
+#main_con2-first {
+  border-left: 1px solid var(--line-color);
+  align-self: flex-start;
+  order: 1;
+  padding-left: 4vw;
+  padding-bottom: 7rem;
+}
+
+#main_con2-first video {
+  width: 100%;
+  height: 63vw;
+  object-fit: cover;
+}
+
+#main_con2-first h1 {
+  font-size: 3rem;
+}
+#main_con2-first h1 br {
+  display: block;
+}
+#main_con2-first > span {
+  font-size: 1rem;
+}
+
+#main_con2-first .main_Read-Btn {
+  padding: 0 0 2rem 0;
+}
+
+/* main_con2 - 우승 기숙사 */
+#main_con2-second {
+  align-self: flex-end;
+  padding-top: 0;
+  padding-right: 4vw;
+}
+#main_con2-second p {
+  font-size: 1.5rem;
+}
+
+#main_con2-second p br {
+  display: block;
+}
+
+#main_con2-second h1 {
+  /* font-size: 3rem; */
+  font-size: 4.7vw;
+  padding-bottom: 1.5rem;
+}
+
+#main_con2-second-img-wrap {
+  width: 100%;
+  height: 43.75vw;
+  overflow: hidden;
+}
+
+#main_con2-second img {
+  bottom: 0;
+  left: -5%;
+  width: 110%;
+}
+
+/* main_con3 style sheet : 기숙사 점수 */
+.main_con3 {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  margin: 0 var(--display-gap);
+  padding: 2rem 1rem;
+}
+
+.main_con3-house p {
+  font-size: 1rem;
+}
+
+.main_con3-house h3 {
+  font-size: 3rem;
+}
+
 /* main_con4 style sheet */
 .main_con4 {
   display: grid;
   grid-template-columns: 25% 50% 25%;
   grid-template-rows: 100%;
-  /* height: 90vh; */
-  max-height: 1000px;
-  overflow: hidden;
-  padding: 0 var(--mobile-gap) 2rem;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
+  height: 57vh;
+  max-height: 770px;
+  margin:  0 var(--display-gap);
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--line-color);
 }
 
 .main_blog-header {
@@ -188,74 +331,54 @@
   margin-right: 2vw;
 }
 .main_blog-big_title {
-  font-size: 6.45vw;
-  font-weight: 600;
-  padding-bottom: 1.5rem;
+  font-size: clamp(4rem, 6.25vw, 6rem);
+  padding-bottom: 0.75rem;
   border-bottom: 1px solid var(--line-color);
-  letter-spacing: -0.05em;
 }
 .main_page-number {
   text-align: right;
   font-weight: 600;
-  font-size: 4.16vw;
+  font-size: clamp(3rem, 4.16vw, 4rem);
   letter-spacing: -0.02em;
   text-transform: uppercase;
 }
 
 /* con4 - 기사 */
 .main_blog-header-container {
-  overflow-y: auto;
-  overflow-x: hidden;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  -ms-scroll-snap-type: y mandatory;
-  scroll-snap-type: y mandatory;
   border-right: 1px solid var(--line-color);
 }
-.main_blog-header-container > * {
-  flex-shrink: 0;
-  min-height: 100%;
-  scroll-snap-align: start;
-}
+
 .main_blog-header-container .main_blog-big_title {
   margin: 0 2vw;
 }
 .main_header-article {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   padding: 0 2vw;
 }
 
 .main_header-article img {
-  border: var(--line-color);
-  height: 384px;
-  -o-object-fit: cover;
-  object-fit: cover;
+  height: 13rem;
   max-height: 36vh;
-  width: 100%;
 }
 .main_header-article h2 {
-  font-family: "suit";
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: -0.02em;
+  padding: 0;
+  font-size: 1.75rem;
 }
 .main_header-article span {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  padding-bottom: 0;
 }
 
 .main_header-article > .main_Read-Btn {
   border-bottom: 1px solid var(--line-color);
-  padding-bottom: 3rem;
-  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 /* con4 - 우측 게시판 */
 .main_right-blog {
   overflow: auto;
+  border: 0;
 }
 .main_blog-right {
   padding-left: 2vw;
@@ -263,28 +386,101 @@
 .main_blog-right-container {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-  padding-bottom: 40px;
+  gap: 1rem;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--line-color);
 }
+.main_blog-right-container:first-child {
+  margin-top: 0;
+}
 .main_blog-right-container:not(:first-child) {
-  margin: 40px 0;
+  margin: 1rem 0;
 }
 
 .main_blog-right-menu {
-  font-weight: 700;
   font-size: 14px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
 }
 .main_blog-right-title {
-  font-weight: 500;
-  font-size: 1.5rem;
-  letter-spacing: -0.02em;
+  font-size: 1.125rem;
 }
 .main_blog-right-date {
-  color: var(--point-color);
-  font-weight: 500;
-  letter-spacing: -0.02em;
-  text-transform: capitalize;
+  font-size: 14px;
+}
+
+
+/* main_con5 style sheet */
+.main_con5 {
+  gap: 1.5rem;
+  margin: 0px var(--display-gap);
+  padding-top: 3rem;
+  grid-template-columns: 40% 58%;
+}
+
+/* main_con5 -  오늘 식단표 */
+.main_con5-today_menu h3 {
+  font-size: 2rem;
+}
+
+/* main_con5 - 세계 뉴스 */
+.main_con5-world_news {
+  grid-template-columns: 3fr 1fr;
+}
+
+
+/* main_con6 style sheet - 교수 */
+.main_con6 {
+  padding: 2rem var(--display-gap) 3rem;
+}
+.main_con6-hr-sect {
+  padding-bottom: 2rem;
+}
+
+.main_con6_card-wrapper {
+  gap: 1rem;
+}
+
+.main_con6_card-front {
+  padding: 1.25vw;
+}
+
+.main_con6_card-front img {
+  padding: 1.5rem 0;
+}
+
+.main_con6_card-front p {
+  font-size: 1rem;
+}
+
+
+/* main_con7 style sheet */
+.main_con7 {
+  display: grid;
+  border-top: 1px solid var(--line-color);
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  padding: 3rem 0;
+}
+
+.main_con7 div img {
+  height: 15rem;
+}
+
+main_con7 div h3 {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+
+.main_con7 div span {
+  font-size: 1rem;
+}
+
+/* main_auto-scroll style sheet */
+.main_auto-scroll {
+  height: 8.5rem;
+}
+
+/* footer style sheet */
+footer {
+  height: 10.625rem;
 }

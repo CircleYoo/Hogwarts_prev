@@ -37,6 +37,7 @@
 #main_head-title img {
   width: 116px;
 }
+
 #main_head-title-text h1 {
   font-size: 6.25vw;
 }
@@ -60,7 +61,7 @@
 }
 
 /* main_mobile-toggle style sheet */
-.active {
+.mobile-toggle-active {
   height: 45rem !important;
 }
 
@@ -191,9 +192,7 @@
 #main_con2-first h1 {
   font-size: 10vw;
 }
-#main_con2-first span {
-  font-size: 1.5rem;
-}
+
 #main_con2-first .main_Read-Btn {
   padding: 0 0 3rem;
 }
@@ -374,7 +373,7 @@
 
 /* main_con6 style sheet - 교수 */
 .main_con6 {
-  padding: 3rem var(--display-gap) 4rem;
+  padding: 3rem var(--display-gap);
 }
 
 .main_con6-hr-sect {
@@ -415,7 +414,7 @@
 /* main_con7 style sheet */
 .main_con7 {
   gap: 3rem;
-  padding: 4rem var(--display-gap);
+  padding: 4rem 0;
 }
 
 .main_con7 div h3 {
