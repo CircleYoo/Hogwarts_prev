@@ -55,6 +55,10 @@
 #main_nav-menu {
   grid-template-columns: 1.1fr 6fr 1fr;
   height: 6rem;
+  transition: all 0.3s ease-out;
+}
+.nav-menu-scrolled {
+  height: 4rem !important;
 }
 #main_nav-menu > p {
   font-size: 1.25rem;
@@ -145,14 +149,15 @@
 }
 
 .main_ctr-box {
+  grid-template-columns: 4fr 1fr 1fr;
   align-items: flex-end;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 1rem;
 }
 
 .main_ctr-num {
+  gap: 0.5rem;
+  align-items: flex-start;
   order: 0;
+  padding-left: 1rem;
 }
 
 .main_btn-cal+.next {
@@ -160,6 +165,7 @@
 }
 .main_cal-year {
   font-size: 1.25rem;
+  padding-left: 0.2rem;
 }
 .main_cal-month {
   font-size: 3rem;
@@ -181,7 +187,7 @@
   justify-content: center;
   text-align: center;
   gap: 2rem;
-  padding: 4vw;
+  padding: 0 4vw;
 }
 
 .main_song h1 {

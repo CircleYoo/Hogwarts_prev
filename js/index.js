@@ -6,9 +6,19 @@
     history.scrollRestoration = "auto";
 
     // header
+    // 스크롤 시, header 높이 축소
+    const $navMenu = document.querySelector('#main_nav-menu');
+    window.onscroll = function() {
+        if (window.scrollY > 0) {
+            $navMenu.classList.add('nav-menu-scrolled');
+        } else {
+            $navMenu.classList.remove('nav-menu-scrolled');
+        }
+    }
+
     // main_search-container 클릭 후 유지
-    let $searchFront = document.querySelector('#search-front > input');
-    let $searchBack = document.querySelector('#search-back > input');
+    const $searchFront = document.querySelector('#search-front > input');
+    const $searchBack = document.querySelector('#search-back > input');
     
     console.log($searchFront)
     console.log($searchBack)
