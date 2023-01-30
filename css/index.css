@@ -532,7 +532,8 @@ header {
   display: inline;
   padding-top: 0.75rem;
   font-size: 0.75rem;
-  border-bottom: 1px solid var(--line-color)
+  border-bottom: 1px solid var(--line-color);
+  width: 55%;
 }
 
 .main_calendar-sub h3 {
@@ -583,7 +584,8 @@ header {
 .main_awards p {
   display: inline;
   font-size: 0.75rem;
-  border-bottom: 1px solid var(--line-color)
+  border-bottom: 1px solid var(--line-color);
+  width: 45%;
 }
 
 .main_awards h3 {
@@ -734,8 +736,8 @@ header {
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: 55% 45%;
-  /* height: 90vh; */
-  max-height: 1135px;
+  height: auto;
+  max-height: 1000px;
   overflow: hidden;
   padding: 0 var(--display-gap) 2rem;
   position: relative;
@@ -885,6 +887,11 @@ header {
   text-align: center;
   width: 100%;
   transition: all 0.2s ease-out;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .main_con5-categories div:hover {
@@ -913,6 +920,8 @@ header {
 
 /* main_con5 -  오늘 식단표 */
 .main_con5-today_menu {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--gryffindor-color);
   padding: 8vw;
   text-align: center;

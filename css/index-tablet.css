@@ -441,7 +441,7 @@
 /* footer style sheet */
 footer {
     height: 10rem;
-    padding: var(--display-gap);
+    padding:  2.25rem var(--display-gap);
   }
   
   footer span {
