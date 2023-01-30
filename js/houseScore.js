@@ -8,13 +8,14 @@
 
   let countMotion = function () {
     counters.forEach((counter) => {
-      const animate = () => {
-        const value = +counter.getAttribute("value"); // 선택한 요소의 특정 속성값 가져오기
-        const data = +counter.innerText;
-
-        const time = value / speed;
-        if (data < value) {
-          counter.innerText = Math.ceil(data + time);
+      const value = +counter.getAttribute("value"); // 선택한 요소의 특정 속성값 가져오기
+      const time = value / speed;
+     
+      const animate = () => {        
+        const data = +(counter.innerText).replace(',', '');
+        
+        if (data < value) {               
+          counter.innerText = Math.ceil(data + time).toLocaleString("ko-KR");
           setTimeout(animate, 1);
         } else {
           counter.innerText = value.toLocaleString("ko-KR");

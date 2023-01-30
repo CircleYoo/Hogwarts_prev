@@ -116,7 +116,7 @@ const init = {
   $btnNext.addEventListener('click', () => loadYYMM(init.nextMonth()));
   $btnPrev.addEventListener('click', () => loadYYMM(init.prevMonth()));
   
-  $calBody.addEventListener('click', (e) => {
+  $calBody.addEventListener('mousemove', (e) => {
     if (e.target.classList.contains('day')) {
       if (init.activeDTag) {
         init.activeDTag.classList.remove('day-active');
